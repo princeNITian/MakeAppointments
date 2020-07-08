@@ -21,6 +21,11 @@ export class AppComponent {
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
+      //this.splashScreen.show();
+      // setTimeout(() => {
+      //   this.splashScreen.hide();
+      //   console.log('Splash hidden');
+      // }, 3000);
       this.splashScreen.hide();
     });
   }

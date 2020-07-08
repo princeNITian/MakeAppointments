@@ -9,4 +9,8 @@ export class HomePage {
 
   constructor() {}
 
+  showModal() {
+    console.log('Modal show.');
+  }
+
 }

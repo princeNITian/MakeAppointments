@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title >Appointment Booked</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let appointment of appointments;">
+    <ion-card-header>
+      <ion-card-subtitle><ion-icon color="primary" name="calendar-outline"></ion-icon><ion-label>{{ appointment.appointmentDate | date  }}</ion-label></ion-card-subtitle>
+      <ion-card-title>{{ appointment.name }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      
+   
+      <ion-item>
+        <ion-icon name="mail-outline" slot="start" (click)="presentToast(appointment)"></ion-icon>
+        <ion-label>{{ appointment.email }}</ion-label>
+        <ion-button  color="danger" slot="end" (click)="cancelAppointment(appointment._id)">Cancel</ion-button>
+      </ion-item>
+ </ion-card-content>
+
+  </ion-card>
+</ion-content>
